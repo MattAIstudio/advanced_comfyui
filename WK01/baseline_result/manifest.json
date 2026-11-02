@@ -1,0 +1,46 @@
+{
+    "timestamp": "2026-10-22 22:53:06",
+    "hardware_and_env": {
+        "gpu_name": "NVIDIA GeForce RTX 5090",
+        "torch_version": "2.7.0+cu128",
+        "cuda_version": "12.8"
+    },
+    "config": {
+        "seed": 42,
+        "steps": 20,
+        "resolution": "512x512"
+    },
+    "metrics": [
+        {
+            "run_id": 1,
+            "duration_sec": 20.04,
+            "peak_vram_mb": 2288.66,
+            "output_images": [
+                "ComfyUI_00012_.png",
+                "ComfyUI_temp_mcrju_00001_.png"
+            ]
+        },
+        {
+            "run_id": 2,
+            "duration_sec": 21.28,
+            "peak_vram_mb": 2273.6,
+            "output_images": [
+                "ComfyUI_00013_.png",
+                "ComfyUI_temp_tlsgv_00001_.png"
+            ]
+        },
+        {
+            "run_id": 3,
+            "duration_sec": 21.09,
+            "peak_vram_mb": 2295.05,
+            "output_images": [
+                "ComfyUI_00014_.png",
+                "ComfyUI_temp_cbphy_00001_.png"
+            ]
+        }
+    ],
+    "summary": {
+        "cold_start_time": 20.04,
+        "avg_warm_time": 21.19
+    }
+}
