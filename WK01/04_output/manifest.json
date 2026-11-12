@@ -1,0 +1,287 @@
+{
+  "schema_version": "2.0",
+  "benchmark": {
+    "benchmark_id": "e65e83e2-ebcf-4739-8501-a742d0f13351",
+    "started_at_utc": "2026-11-05T11:08:54.858455Z",
+    "completed_at_utc": "2026-11-05T11:10:19.679857Z",
+    "wall_clock_seconds": 84.821,
+    "server": "http://127.0.0.1:8188",
+    "client_id": "38a5d3a9-a355-4a81-9bc4-8cfa7c59846a",
+    "local_output_directory": "D:\\Coding\\advanced_comfyui\\WK01\\04_output",
+    "warmup_runs": 1,
+    "measured_runs": 5,
+    "sampling_steps": 20,
+    "base_seed": 4232282997685241562,
+    "cache_mode": "default"
+  },
+  "environment": {
+    "os": "win32",
+    "comfyui_version": "0.37.0",
+    "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "pytorch_version": "2.7.0+cu128",
+    "cuda_version": "12.8",
+    "gpu_driver_version": "595.79",
+    "embedded_python": true,
+    "server_arguments": [
+      "ComfyUI\\main.py",
+      "--windows-standalone-build"
+    ],
+    "device": {
+      "name": "cuda:0 NVIDIA GeForce RTX 5090 : cudaMallocAsync",
+      "type": "cuda",
+      "index": 0,
+      "vram_total_bytes": 34190458880,
+      "vram_total_gb": 31.84
+    },
+    "system_ram_total_gb": 93.65
+  },
+  "workflow": {
+    "file": "D:\\Coding\\advanced_comfyui\\WK01\\03_code\\image_qwen_image_2_1_t2i_workflow_api.json",
+    "sha256": "48418daca9d6a54b82de1296cc2d4205f7803b93b89b0653becb9debbe74635a",
+    "node_count": 9,
+    "node_class_counts": {
+      "CLIPLoader": 1,
+      "EmptyLatentImage": 1,
+      "KSampler": 1,
+      "ResolutionSelector": 1,
+      "SaveImageAdvanced": 1,
+      "TextEncodeQwenImage21": 1,
+      "UNETLoader": 1,
+      "VAEDecode": 1,
+      "VAELoader": 1
+    },
+    "models": [
+      {
+        "node_id": "459:451",
+        "class_type": "UNETLoader",
+        "unet_name": "qwen_image_2.1_int8_convrot.safetensors"
+      },
+      {
+        "node_id": "459:453",
+        "class_type": "CLIPLoader",
+        "clip_name": "qwen3vl_8b_int8_convrot.safetensors"
+      },
+      {
+        "node_id": "459:454",
+        "class_type": "VAELoader",
+        "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+      }
+    ],
+    "samplers": [
+      {
+        "node_id": "459:458",
+        "steps": 20,
+        "cfg": 1,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1
+      }
+    ],
+    "resolution": [
+      {
+        "node_id": "13",
+        "class_type": "ResolutionSelector",
+        "aspect_ratio": "1:1 (Square)",
+        "megapixels": 1,
+        "multiple": 8
+      },
+      {
+        "node_id": "459:456",
+        "class_type": "EmptyLatentImage",
+        "width": [
+          "13",
+          0
+        ],
+        "height": [
+          "13",
+          1
+        ],
+        "batch_size": 1
+      }
+    ]
+  },
+  "runs": {
+    "warmup": [
+      {
+        "phase": "warmup",
+        "run": 1,
+        "prompt_id": "de24c35e-ab21-48bc-be30-01e981f7c1fd",
+        "seed": 4232282997685241562,
+        "status": "completed",
+        "duration_seconds": 20.171,
+        "queue_seconds": 0.005,
+        "execution_seconds": 20.165,
+        "outputs": [
+          {
+            "node_id": "461",
+            "filename": "Qwen_image_2.1_00093.png",
+            "subfolder": "",
+            "type": "output",
+            "local_path": "D:\\Coding\\advanced_comfyui\\WK01\\04_output\\benchmark_e65e83e2_warmup_01_4232282997685241562_01_Qwen_image_2.1_00093.png",
+            "size_bytes": 2370875,
+            "sha256": "d40b34d8a1a1adebe3702893f0f14a53ad8a285094004b612c6b07d551203a1b",
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      }
+    ],
+    "measured": [
+      {
+        "phase": "measured",
+        "run": 1,
+        "prompt_id": "a0c8c2ae-9ef4-42c4-9159-c98373102724",
+        "seed": 4232282997685241563,
+        "status": "completed",
+        "duration_seconds": 12.434,
+        "queue_seconds": 0.016,
+        "execution_seconds": 12.417,
+        "outputs": [
+          {
+            "node_id": "461",
+            "filename": "Qwen_image_2.1_00094.png",
+            "subfolder": "",
+            "type": "output",
+            "local_path": "D:\\Coding\\advanced_comfyui\\WK01\\04_output\\benchmark_e65e83e2_measured_01_4232282997685241563_01_Qwen_image_2.1_00094.png",
+            "size_bytes": 2542621,
+            "sha256": "36585f6aec3db88137ed54667d64241429df62c719485194ea7a8ff09d7019e7",
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      },
+      {
+        "phase": "measured",
+        "run": 2,
+        "prompt_id": "3daa7313-56c0-4606-bab0-164364bf94fe",
+        "seed": 4232282997685241564,
+        "status": "completed",
+        "duration_seconds": 12.864,
+        "queue_seconds": 0.003,
+        "execution_seconds": 12.86,
+        "outputs": [
+          {
+            "node_id": "461",
+            "filename": "Qwen_image_2.1_00095.png",
+            "subfolder": "",
+            "type": "output",
+            "local_path": "D:\\Coding\\advanced_comfyui\\WK01\\04_output\\benchmark_e65e83e2_measured_02_4232282997685241564_01_Qwen_image_2.1_00095.png",
+            "size_bytes": 2454234,
+            "sha256": "5e57ac6bffb64cdc9116a2c31b588f3de05ce9ca52ce41dc07849e7cbe4ae551",
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      },
+      {
+        "phase": "measured",
+        "run": 3,
+        "prompt_id": "4274ef0c-042c-4caa-981d-0a2321db8ca9",
+        "seed": 4232282997685241565,
+        "status": "completed",
+        "duration_seconds": 12.544,
+        "queue_seconds": 0.003,
+        "execution_seconds": 12.541,
+        "outputs": [
+          {
+            "node_id": "461",
+            "filename": "Qwen_image_2.1_00096.png",
+            "subfolder": "",
+            "type": "output",
+            "local_path": "D:\\Coding\\advanced_comfyui\\WK01\\04_output\\benchmark_e65e83e2_measured_03_4232282997685241565_01_Qwen_image_2.1_00096.png",
+            "size_bytes": 2335221,
+            "sha256": "838e82802ea243d326bdf1f5683e9d50f265e6bc0337d325fc675bf586f924c2",
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      },
+      {
+        "phase": "measured",
+        "run": 4,
+        "prompt_id": "861f0918-b885-43d7-8ea2-a673a2e75fc6",
+        "seed": 4232282997685241566,
+        "status": "completed",
+        "duration_seconds": 12.868,
+        "queue_seconds": 0.003,
+        "execution_seconds": 12.865,
+        "outputs": [
+          {
+            "node_id": "461",
+            "filename": "Qwen_image_2.1_00097.png",
+            "subfolder": "",
+            "type": "output",
+            "local_path": "D:\\Coding\\advanced_comfyui\\WK01\\04_output\\benchmark_e65e83e2_measured_04_4232282997685241566_01_Qwen_image_2.1_00097.png",
+            "size_bytes": 2490001,
+            "sha256": "1e40ec4054874606d6f97e08d505b780b17d6768f3cd937510fbe480107b2043",
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      },
+      {
+        "phase": "measured",
+        "run": 5,
+        "prompt_id": "bbe50f14-fc48-401b-9af6-87a0ec833705",
+        "seed": 4232282997685241567,
+        "status": "completed",
+        "duration_seconds": 12.923,
+        "queue_seconds": 0.016,
+        "execution_seconds": 12.907,
+        "outputs": [
+          {
+            "node_id": "461",
+            "filename": "Qwen_image_2.1_00098.png",
+            "subfolder": "",
+            "type": "output",
+            "local_path": "D:\\Coding\\advanced_comfyui\\WK01\\04_output\\benchmark_e65e83e2_measured_05_4232282997685241567_01_Qwen_image_2.1_00098.png",
+            "size_bytes": 2311465,
+            "sha256": "647257533547a467d2819ad97688f260e02e9d029fa9ebf56fe78a19ef0e410a",
+            "width": 1024,
+            "height": 1024
+          }
+        ]
+      }
+    ]
+  },
+  "performance": {
+    "end_to_end": {
+      "average_seconds": 12.727,
+      "median_seconds": 12.864,
+      "minimum_seconds": 12.434,
+      "maximum_seconds": 12.923,
+      "standard_deviation_seconds": 0.198,
+      "p95_seconds": 12.912
+    },
+    "queue": {
+      "average_seconds": 0.008,
+      "median_seconds": 0.003,
+      "minimum_seconds": 0.003,
+      "maximum_seconds": 0.016,
+      "standard_deviation_seconds": 0.006,
+      "p95_seconds": 0.016
+    },
+    "execution": {
+      "average_seconds": 12.718,
+      "median_seconds": 12.86,
+      "minimum_seconds": 12.417,
+      "maximum_seconds": 12.907,
+      "standard_deviation_seconds": 0.2,
+      "p95_seconds": 12.899
+    },
+    "measured_duration_seconds": 63.633,
+    "output_count": 5,
+    "images_per_minute": 4.715,
+    "p95_note": "Treat p95 as indicative only when fewer than 20 measured runs are used."
+  },
+  "memory": {
+    "vram_total_gb": 31.84,
+    "baseline_vram_used_gb": 1.61,
+    "peak_vram_used_gb": 19.39,
+    "benchmark_vram_delta_gb": 17.78,
+    "poll_interval_ms": 100,
+    "successful_samples": 698,
+    "failed_samples": 0,
+    "note": "Sampled from ComfyUI /system_stats; values include baseline usage and other GPU processes, and short spikes may be missed."
+  }
+}

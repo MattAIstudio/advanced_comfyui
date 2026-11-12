@@ -1,0 +1,26 @@
+{
+  "collected_at": "2026-11-02T23:59:40+08:00",
+  "comfyui_connected": true,
+  "comfyui_server": "http://127.0.0.1:8188",
+  "workflow_path": "D:\\Coding\\advanced_comfyui\\WK01\\workflow_api.json",
+  "workflow_found": true,
+  "gpu": "RTX 5090 32GB",
+  "system_ram_gb": 96,
+  "os": "Windows 11",
+  "python_version": "3.14.9",
+  "driver": "595.79",
+  "pytorch": "2.7.0+cu128",
+  "cuda_runtime": "12.8",
+  "comfyui_version": "0.37.0",
+  "workflow_sha256": "a4f0e620dda05cb82e5d296297c9b90d1f63aa335c7e59559a4d0301618e38d1",
+  "model_files": [
+    "ae.safetensors",
+    "qwen_3_4b.safetensors",
+    "z_image_turbo_bf16.safetensors"
+  ],
+  "launch_args": [
+    "--windows-standalone-build"
+  ],
+  "attention_backend": "auto",
+  "precision": "bf16"
+}
