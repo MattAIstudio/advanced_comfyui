@@ -1,0 +1,124 @@
+{
+  "comfy_dir": "D:\\ComfyUI\\ComfyUI\\models\\vae",
+  "pytorch_version": "2.7.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "input_image": "D:\\Coding\\advanced_comfyui\\WK02\\mattbook_pro_16_test_plate.png",
+  "input_tensor": {
+    "shape": [
+      1,
+      1024,
+      1024,
+      3
+    ],
+    "dtype": "torch.float32",
+    "device": "cpu",
+    "numel": 3145728,
+    "nbytes_mb": 12.0,
+    "min": 0.070588,
+    "max": 1.0,
+    "has_nan": false,
+    "has_inf": false
+  },
+  "runs": [
+    {
+      "vae_name": "flux2-vae.safetensors",
+      "load_ms": 74.2,
+      "encode_ms": 277.74,
+      "decode_ms": 137.47,
+      "peak_vram_mb": 2363.44,
+      "compression_ratio": "6.0x",
+      "latent_tensor": {
+        "shape": [
+          1,
+          128,
+          64,
+          64
+        ],
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "numel": 524288,
+        "nbytes_mb": 2.0,
+        "min": -4.875,
+        "max": 4.78125,
+        "has_nan": false,
+        "has_inf": false
+      },
+      "decoded_tensor": {
+        "shape": [
+          1,
+          1024,
+          1024,
+          3
+        ],
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "numel": 3145728,
+        "nbytes_mb": 12.0,
+        "min": 0.0,
+        "max": 1.0,
+        "has_nan": false,
+        "has_inf": false
+      },
+      "psnr_db": 31.127,
+      "ssim": 0.99287,
+      "mean_l1": 0.005917454604059458,
+      "max_l1": 0.6064057350158691,
+      "heatmap_gain": 8.0,
+      "artifacts": {
+        "decoded": "D:\\Coding\\advanced_comfyui\\WK02\\flux2-vae_decoded.png",
+        "heatmap": "D:\\Coding\\advanced_comfyui\\WK02\\flux2-vae_heatmap.png",
+        "zoom_crops": "D:\\Coding\\advanced_comfyui\\WK02\\flux2-vae_crops_400pct.png"
+      }
+    },
+    {
+      "vae_name": "ae.safetensors",
+      "load_ms": 63.12,
+      "encode_ms": 107.78,
+      "decode_ms": 134.46,
+      "peak_vram_mb": 2360.51,
+      "compression_ratio": "12.0x",
+      "latent_tensor": {
+        "shape": [
+          1,
+          16,
+          128,
+          128
+        ],
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "numel": 262144,
+        "nbytes_mb": 1.0,
+        "min": -12.875,
+        "max": 11.25,
+        "has_nan": false,
+        "has_inf": false
+      },
+      "decoded_tensor": {
+        "shape": [
+          1,
+          1024,
+          1024,
+          3
+        ],
+        "dtype": "torch.float32",
+        "device": "cpu",
+        "numel": 3145728,
+        "nbytes_mb": 12.0,
+        "min": 0.0,
+        "max": 1.0,
+        "has_nan": false,
+        "has_inf": false
+      },
+      "psnr_db": 36.112,
+      "ssim": 0.99672,
+      "mean_l1": 0.009431228041648865,
+      "max_l1": 0.40588489174842834,
+      "heatmap_gain": 8.0,
+      "artifacts": {
+        "decoded": "D:\\Coding\\advanced_comfyui\\WK02\\ae_decoded.png",
+        "heatmap": "D:\\Coding\\advanced_comfyui\\WK02\\ae_heatmap.png",
+        "zoom_crops": "D:\\Coding\\advanced_comfyui\\WK02\\ae_crops_400pct.png"
+      }
+    }
+  ]
+}
